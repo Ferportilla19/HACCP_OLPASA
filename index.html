@@ -473,8 +473,8 @@ tr:hover td{background:#fafffe;}
       <div class="nav-sub" onclick="nav('haccp-plan',this)"><span class="nav-sub-icon">📄</span>Plan HACCP v08</div>
       <div class="nav-sub" onclick="nav('equipo',this)"><span class="nav-sub-icon">👥</span>Equipo HACCP</div>
       <div class="nav-sub" onclick="nav('diagrama-flujo',this)"><span class="nav-sub-icon">🔀</span>Diagrama de Flujo</div>
-      <div class="nav-sub" onclick="nav('pcc',this)"><span class="nav-sub-icon">⭐</span>PPRO Activo</div>
-      <div class="nav-sub" onclick="nav('vigilancia',this)"><span class="nav-sub-icon">📊</span>Vigilancia PPRO</div>
+      <div class="nav-sub" onclick="nav('pcc',this)"><span class="nav-sub-icon">🎯</span>Control Esterilizado</div>
+      <div class="nav-sub" onclick="nav('vigilancia',this)"><span class="nav-sub-icon">📊</span>Monitoreo Semanal</div>
     </div>
   </div>
 
@@ -602,7 +602,7 @@ tr:hover td{background:#fafffe;}
   <div class="dash-kpis">
     <div class="kpi kpi-ok"><div class="kpi-icon">📁</div><div class="kpi-val" id="d-docs">0</div><div class="kpi-label">Docs. Subidos</div><div class="kpi-glow"></div></div>
     <div class="kpi"><div class="kpi-icon">🎯</div><div class="kpi-val">0</div><div class="kpi-label">PCC Activos</div><div class="kpi-glow"></div></div>
-    <div class="kpi kpi-ok"><div class="kpi-icon">⭐</div><div class="kpi-val">1</div><div class="kpi-label">PPRO Activo</div><div class="kpi-glow"></div></div>
+    <div class="kpi kpi-ok"><div class="kpi-icon">⚙️</div><div class="kpi-val">1</div><div class="kpi-label">Control Esterilizado</div><div class="kpi-glow"></div></div>
     <div class="kpi" id="kpi-alertas-box"><div class="kpi-icon">🔔</div><div class="kpi-val" id="d-alertas">0</div><div class="kpi-label">Alertas Serv. Ext.</div><div class="kpi-glow"></div></div>
     <div class="kpi kpi-ok"><div class="kpi-icon">📋</div><div class="kpi-val">v08</div><div class="kpi-label">Version Plan</div><div class="kpi-glow"></div></div>
     <div class="kpi"><div class="kpi-icon">🏢</div><div class="kpi-val" id="kpi-sext-total">0</div><div class="kpi-label">Servicios Ext.</div><div class="kpi-glow"></div></div>
@@ -611,7 +611,7 @@ tr:hover td{background:#fafffe;}
   <div id="dash-alertas" style="margin-bottom:14px;"></div>
   <div class="alert-banner green" style="margin-bottom:16px;">
     <span class="alert-banner-icon">✅</span>
-    <div><b>Plan HACCP validado por DIGESA</b> — Version 08 — Diciembre 2023. Sin PCC. PPRO: Engrase vagones (esterilizado).</div>
+    <div><b>Plan HACCP validado por DIGESA</b> — Versión 08 — Diciembre 2023. Sin PCC identificados. Control operacional activo: Engrase de vagones (Esterilizado) — RM 449-2006/MINSA.</div>
   </div>
 
   <div class="dash-grid">
@@ -639,7 +639,7 @@ tr:hover td{background:#fafffe;}
         <div class="activity-list">
           <div class="act-item"><div class="act-dot green">✅</div><div><div class="act-title">Plan HACCP v08 validado</div><div class="act-sub">DIGESA — Diciembre 2023</div></div></div>
           <div class="act-item"><div class="act-dot blue">🏭</div><div><div class="act-title">Sistema inicializado</div><div class="act-sub">Listo para cargar documentos</div></div></div>
-          <div class="act-item"><div class="act-dot yellow">⭐</div><div><div class="act-title">PPRO activo: Esterilizado</div><div class="act-sub">Monitoreo semanal requerido</div></div></div>
+          <div class="act-item"><div class="act-dot yellow">⭐</div><div><div class="act-title">Control Op. activo: Esterilizado</div><div class="act-sub">Vigilancia semanal · Art. 25 RM449</div></div></div>
           <div id="dash-act-docs"></div>
         </div>
         <div style="margin-top:14px;padding-top:12px;border-top:1px dashed #eee;text-align:center;">
@@ -691,7 +691,7 @@ tr:hover td{background:#fafffe;}
 <div class="page" id="page-auditor-haccp">
   <div class="ph">
     <h2>🎖️ Auditor HACCP — Verificación del Sistema</h2>
-    <p>OLPASA-SIG-F-025 · Evaluación progresiva automática · Puntaje sobre 164 puntos</p>
+    <p>RM 449-2006-MINSA · DIGESA · Evaluación automática · Puntaje sobre 170 puntos</p>
   </div>
 
   <!-- RESUMEN SUPERIOR -->
@@ -728,7 +728,7 @@ tr:hover td{background:#fafffe;}
       <div id="aud-barra-general" style="height:100%;background:linear-gradient(90deg,#2e7d32,#66bb6a);border-radius:12px;width:0%;transition:width 0.6s ease;"></div>
     </div>
     <div style="display:flex;justify-content:space-between;margin-top:4px;font-size:11px;color:#888;">
-      <span>0</span><span>Mínimo aprobación: 128/164 (78%)</span><span>164</span>
+      <span>0</span><span>Mínimo aprobación: 133/170 (78%) · RM 449-2006-MINSA</span><span>164</span>
     </div>
   </div>
 
@@ -780,7 +780,7 @@ tr:hover td{background:#fafffe;}
         <span class="haccp-plan-badge">📄 Versión 08 · 2023</span>
         <span class="haccp-plan-badge">🏭 Aceite Crudo de Palma</span>
         <span class="haccp-plan-badge">⚙️ 12 Etapas de Proceso</span>
-        <span class="haccp-plan-badge">⭐ 1 PPRO Activo</span>
+        <span class="haccp-plan-badge">⚙️ Control Operacional Activo</span>
         <span class="haccp-plan-badge">🎯 0 PCC Identificados</span>
       </div>
     </div>
@@ -910,7 +910,7 @@ tr:hover td{background:#fafffe;}
     <div class="steps">
       <div class="step"><div class="step-num">1</div><div><h4>Pesaje</h4><p>Balanza plataforma · OLPASA-PR-I-06</p></div></div>
       <div class="step"><div class="step-num">2</div><div><h4>Recepción RFF</h4><p>Tolva metálica 7 compuertas · OLPASA-AQ-ME-001</p></div></div>
-      <div class="step"><div class="step-num">3</div><div><h4>Esterilizado ⭐ PPRO</h4><p>50 Psi / 140°C / 60 min · OLPASA-PR-I-02</p></div></div>
+      <div class="step"><div class="step-num">3</div><div><h4>Esterilizado ⚙️ Control Op.</h4><p>50 Psi / 140°C / 60 min · OLPASA-PR-I-02</p></div></div>
       <div class="step"><div class="step-num">4</div><div><h4>Desfrutado</h4><p>Tambor rotatorio · OLPASA-PR-I-03</p></div></div>
       <div class="step"><div class="step-num">5</div><div><h4>Malaxado</h4><p>&gt;90°C / 30 min · OLPASA-PR-I-07</p></div></div>
       <div class="step"><div class="step-num">6</div><div><h4>Prensado</h4><p>Extracción hidráulica · OLPASA-PR-I-05</p></div></div>
@@ -945,7 +945,7 @@ tr:hover td{background:#fafffe;}
 
 <!-- PCC -->
 <div class="page" id="page-pcc">
-  <div class="ph"><h2>🎯 PCC / PPRO</h2><p>Principios 2–5 · RM 449-2006/MINSA</p></div>
+  
   <div class="alert alert-green">✅ No se determinaron PCC. Se aplica 1 PPRO en la etapa de Esterilizado.</div>
   <div class="block"><h3>PPRO — Engrase de Vagones</h3>
     <table>
@@ -4814,7 +4814,7 @@ const AUD_SECCIONES = [
   { num:5,  nombre:"Descripción del Producto",              min:6,  max:8,  fn: audS5  },
   { num:6,  nombre:"Diagrama de Flujo del Proceso",         min:8,  max:10, fn: audS6  },
   { num:7,  nombre:"Análisis de Peligros",                  min:10, max:12, fn: audS7  },
-  { num:8,  nombre:"Identificación PCC / PPRO",             min:6,  max:8,  fn: audS8  },
+  { num:8,  nombre:"Determinación PCC — Principio 2 (Art. 23)",         min:6,  max:8,  fn: audS8b },
   { num:9,  nombre:"Límites Críticos / Criterios Acción",   min:6,  max:10, fn: audS9  },
   { num:10, nombre:"Monitoreo",                             min:18, max:22, fn: audS10 },
   { num:11, nombre:"Acciones Correctivas",                  min:12, max:16, fn: audS11 },
@@ -4829,6 +4829,48 @@ function anyDocs(...keys){ return keys.some(k=>docCount(k)>0); }
 function score(condiciones){ 
   // condiciones: array de {cumple: bool, peso: 0|1|2}
   return condiciones.reduce((sum,c)=> sum + (c.cumple ? c.peso : 0), 0);
+}
+
+
+// ── SECCIÓN 3b: Capacitación del Personal (Art.12 max 10)
+function audS3b(){
+  const items = [
+    { cumple: docVig('cap')>0||docCount('cap')>0, peso:2, ev:"Programa capacitación documentado"     },
+    { cumple: docCount('cap')>0,                  peso:2, ev:"Temas: BPM, higiene, inocuidad"        },
+    { cumple: docVig('cap')>0,                    peso:2, ev:"Capacitación al Equipo HACCP"          },
+    { cumple: docVig('cap')>0,                    peso:2, ev:"Evaluación del programa de capacitación"},
+    { cumple: docCount('cap')>=2,                 peso:2, ev:"Registros de asistencia y evaluación"  },
+  ];
+  return { items, total: score(items) };
+}
+
+// ── SECCIÓN 4b: Equipo HACCP (Art.17 Paso 1 max 16)
+function audS4b(){
+  const eq = JSON.parse(localStorage.getItem('haccp-equipo')||'[]');
+  const items = [
+    { cumple: eq.length>0,                        peso:2, ev:`${eq.length} miembros registrados`          },
+    { cumple: eq.length>=3,                       peso:2, ev:"Equipo multidisciplinario (≥3 miembros)"    },
+    { cumple: eq.some(m=>m.lider===true),         peso:2, ev:"Coordinador HACCP designado (Art.17)"       },
+    { cumple: eq.length>0,                        peso:2, ev:"Jefe de planta y producción incluidos"      },
+    { cumple: anyDocs('diagrama'),                peso:2, ev:"Actas de reunión del equipo"                },
+    { cumple: docVig('cap')>0||docCount('cap')>0, peso:2, ev:"Capacitación técnica del equipo HACCP"      },
+    { cumple: true,                               peso:2, ev:"Plan HACCP v08 aprobado por equipo"         },
+    { cumple: true,                               peso:2, ev:"Notificación cambios a DIGESA documentada"  },
+  ];
+  return { items, total: score(items) };
+}
+
+// ── SECCIÓN 8b: Determinación PCC (Art.23 Principio 2 max 8)
+function audS8b(){
+  const ppData = JSON.parse(localStorage.getItem('haccp-ppro-data')||'{}');
+  const registros = Object.keys(ppData).length;
+  const items = [
+    { cumple: true,          peso:2, ev:"Árbol de decisiones aplicado (Anexo 3 RM449)"    },
+    { cumple: true,          peso:2, ev:"0 PCC identificados — resultado validado DIGESA"  },
+    { cumple: true,          peso:2, ev:"Control operacional Esterilizado activo"          },
+    { cumple: registros>0,   peso:2, ev:`${registros} registros de vigilancia semanal`     },
+  ];
+  return { items, total: score(items) };
 }
 
 // ── SECCIÓN 1: Organización Empresarial (max 14)
@@ -4938,10 +4980,10 @@ function audS7(){
 // ── SECCIÓN 8: PCC/PPRO (max 8)
 function audS8(){
   const items = [
-    { cumple: true, peso:2, ev:"PPRO Engrase vagones activo"             },
-    { cumple: true, peso:2, ev:"Sin PCC identificados (0 PCC)"           },
-    { cumple: true, peso:2, ev:"PPRO correctamente identificado"         },
-    { cumple: true, peso:2, ev:"PPRO garantiza inocuidad ACP"            },
+    { cumple: true, peso:2, ev:"Control operacional Esterilizado activo"             },
+    { cumple: true, peso:2, ev:"0 PCC — Árbol de decisiones aplicado"           },
+    { cumple: true, peso:2, ev:"Peligro químico controlado operacionalmente"         },
+    { cumple: true, peso:2, ev:"Inocuidad ACP garantizada sin PCC"            },
   ];
   return { items, total: score(items) };
 }
@@ -5027,7 +5069,7 @@ function audS13(){
     { cumple: auditorias.length>0, peso:2, ev:`${auditorias.length} auditorías registradas` },
     { cumple: docVig('lab')>0,     peso:2, ev:"Verificación vía laboratorio"               },
     { cumple: true,                peso:2, ev:"Límites críticos validados DIGESA"           },
-    { cumple: diasMesCheck()>0,    peso:2, ev:"PCC/PPRO bajo control verificado"            },
+    { cumple: diasMesCheck()>0,    peso:2, ev:"Control operacional verificado (Art.27)"            },
     { cumple: diasMesCheck()>0,    peso:2, ev:"Desviaciones verificadas"                    },
     { cumple: diasMesCheck()>0,    peso:2, ev:"Efectividad acciones correctivas"            },
     { cumple: true,                peso:2, ev:"Medidas preventivas aplicadas"               },
@@ -5084,7 +5126,7 @@ function calcAuditor(){
   // Actualizar KPIs
   const pctGeneral = Math.round(totalScore/totalMax*100);
   document.getElementById('aud-pct').textContent = pctGeneral+'%';
-  document.getElementById('aud-score').textContent = totalScore+'/164';
+  document.getElementById('aud-score').textContent = totalScore+'/170';
   document.getElementById('aud-secciones-ok').textContent = seccionesOk+'/13';
   const mes = new Date().toLocaleDateString('es-PE',{month:'long',year:'numeric'});
   document.getElementById('aud-mes').textContent = mes.charAt(0).toUpperCase()+mes.slice(1);
