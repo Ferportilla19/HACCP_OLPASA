@@ -691,10 +691,18 @@ tr:hover td{background:#fafffe;}
 <div class="page" id="page-auditor-haccp">
   <div class="ph">
     <h2>🎖️ Auditor HACCP — Verificación del Sistema</h2>
-    <p>RM 449-2006-MINSA · DIGESA · Evaluación automática · Puntaje sobre 170 puntos</p>
+    <p>RM 449-2006-MINSA · DIGESA · Escala: Cumple 3pts / Parcial 1pt / No cumple 0pts</p>
   </div>
 
   <!-- RESUMEN SUPERIOR -->
+  <!-- LEYENDA -->
+  <div style="background:#fff;border-radius:12px;padding:14px 18px;margin-bottom:16px;box-shadow:0 2px 8px rgba(0,0,0,0.08);display:flex;align-items:center;gap:20px;flex-wrap:wrap;">
+    <span style="font-size:12px;font-weight:700;color:#555;">📊 Escala de evaluación:</span>
+    <span style="display:flex;align-items:center;gap:6px;font-size:12px;"><span style="background:#e8f5e9;color:#2e7d32;border-radius:6px;padding:3px 10px;font-weight:700;">✅ Cumple</span> <b style="color:#2e7d32;">3 pts</b> — Evidencia documentada y verificable</span>
+    <span style="display:flex;align-items:center;gap:6px;font-size:12px;"><span style="background:#fff8e1;color:#e65100;border-radius:6px;padding:3px 10px;font-weight:700;">🟡 Parcial</span> <b style="color:#e65100;">1 pt</b> — En proceso o con observaciones menores</span>
+    <span style="display:flex;align-items:center;gap:6px;font-size:12px;"><span style="background:#ffebee;color:#c62828;border-radius:6px;padding:3px 10px;font-weight:700;">❌ No cumple</span> <b style="color:#c62828;">0 pts</b> — Sin evidencia o incumplimiento total</span>
+  </div>
+
   <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:12px;margin-bottom:20px;" id="aud-kpis">
     <div class="kpi kpi-ok" style="cursor:default;">
       <div class="kpi-icon">📊</div>
@@ -728,7 +736,7 @@ tr:hover td{background:#fafffe;}
       <div id="aud-barra-general" style="height:100%;background:linear-gradient(90deg,#2e7d32,#66bb6a);border-radius:12px;width:0%;transition:width 0.6s ease;"></div>
     </div>
     <div style="display:flex;justify-content:space-between;margin-top:4px;font-size:11px;color:#888;">
-      <span>0</span><span>Mínimo aprobación: 133/170 (78%) · RM 449-2006-MINSA</span><span>164</span>
+      <span>0</span><span>🟢 Conforme ≥90% · 🟡 Mantenimiento ≥75% · 🔴 Alerta <75%</span><span>164</span>
     </div>
   </div>
 
@@ -910,14 +918,14 @@ tr:hover td{background:#fafffe;}
     <div class="steps">
       <div class="step"><div class="step-num">1</div><div><h4>Pesaje</h4><p>Balanza plataforma · OLPASA-PR-I-06</p></div></div>
       <div class="step"><div class="step-num">2</div><div><h4>Recepción RFF</h4><p>Tolva metálica 7 compuertas · OLPASA-AQ-ME-001</p></div></div>
-      <div class="step"><div class="step-num">3</div><div><h4>Esterilizado ⚙️ Control Op.</h4><p>50 Psi / 140°C / 60 min · OLPASA-PR-I-02</p></div></div>
+      <div class="step"><div class="step-num">3</div><div><h4>Esterilizado</h4><p>50 Psi / 140°C / 60 min · OLPASA-PR-I-02</p></div></div>
       <div class="step"><div class="step-num">4</div><div><h4>Desfrutado</h4><p>Tambor rotatorio · OLPASA-PR-I-03</p></div></div>
       <div class="step"><div class="step-num">5</div><div><h4>Malaxado</h4><p>&gt;90°C / 30 min · OLPASA-PR-I-07</p></div></div>
       <div class="step"><div class="step-num">6</div><div><h4>Prensado</h4><p>Extracción hidráulica · OLPASA-PR-I-05</p></div></div>
       <div class="step"><div class="step-num">7</div><div><h4>Tamizado</h4><p>Mallas 20 y 30 mesh</p></div></div>
       <div class="step"><div class="step-num">8</div><div><h4>Clarificación</h4><p>Pre-clarificador → Desarenado → Decantador 3 fases</p></div></div>
       <div class="step"><div class="step-num">9</div><div><h4>Sedimentado</h4><p>85°C / 2 horas</p></div></div>
-      <div class="step"><div class="step-num">10</div><div><h4>Secado</h4><p>Secador vacío 80°C — humedad ≤0.20%</p></div></div>
+      <div class="step"><div class="step-num">10</div><div><h4>Secado 🎯 PCC</h4><p>T° 80–90°C · Tiempo mín. 120 min · Humedad ≤0.1% · Impurezas ≤0.1% · OLPASA-PR-F-001</p></div></div>
       <div class="step"><div class="step-num">11</div><div><h4>Almacenamiento</h4><p>Tanques 250TM, 500TM, 800TM</p></div></div>
       <div class="step"><div class="step-num">12</div><div><h4>Despacho y Transporte</h4><p>Cisternas isotérmicas ≥60°C · OLPASA-PR-I-08</p></div></div>
     </div>
@@ -934,7 +942,8 @@ tr:hover td{background:#fafffe;}
       <tr><td>Recepción RFF</td><td>Físico</td><td>Partículas madera/metal/piedras</td><td>1</td><td>4</td><td><span class="tag tag-gray">NO</span></td><td><span class="tag tag-blue">PPR</span></td></tr>
       <tr><td>Recepción RFF</td><td>Químico</td><td>Fertilizantes/herbicidas</td><td>1</td><td>1</td><td><span class="tag tag-gray">NO</span></td><td><span class="tag tag-blue">PPR</span></td></tr>
       <tr><td>Esterilizado</td><td>Biológico</td><td>Microorganismos RFF</td><td>1</td><td>3</td><td><span class="tag tag-gray">NO</span></td><td><span class="tag tag-blue">PPR</span></td></tr>
-      <tr><td>Esterilizado</td><td>Químico</td><td>Residuos grasa vagones</td><td>3</td><td>4</td><td><span class="tag tag-green">SI</span></td><td><span class="tag tag-yellow">PPRO</span></td></tr>
+      <tr><td>Esterilizado</td><td>Químico</td><td>Residuos grasa vagones</td><td>1</td><td>2</td><td><span class="tag tag-gray">NO</span></td><td><span class="tag tag-blue">PPR</span></td></tr>
+      <tr><td><b>Secado</b></td><td>Biológico</td><td>Desarrollo microbiano por humedad residual elevada</td><td>3</td><td>4</td><td><span class="tag tag-red">SI</span></td><td><span class="tag tag-green">PCC</span></td></tr>
       <tr><td>Desfrutado</td><td>Físico</td><td>Partículas metal/piedras</td><td>1</td><td>4</td><td><span class="tag tag-gray">NO</span></td><td><span class="tag tag-blue">PPR</span></td></tr>
       <tr><td>Malaxado</td><td>Físico</td><td>Partículas metal digestor</td><td>1</td><td>4</td><td><span class="tag tag-gray">NO</span></td><td><span class="tag tag-blue">PPR</span></td></tr>
       <tr><td>Sedimentado</td><td>Biológico</td><td>Microorganismos tanques</td><td>2</td><td>3</td><td><span class="tag tag-gray">NO</span></td><td><span class="tag tag-blue">PPR</span></td></tr>
@@ -945,21 +954,244 @@ tr:hover td{background:#fafffe;}
 
 <!-- PCC -->
 <div class="page" id="page-pcc">
-  
-  <div class="alert alert-green">✅ No se determinaron PCC. Se aplica 1 PPRO en la etapa de Esterilizado.</div>
-  <div class="block"><h3>PPRO — Engrase de Vagones</h3>
-    <table>
-      <tr><td><b>Etapa</b></td><td>Esterilizado</td></tr>
-      <tr><td><b>Peligro</b></td><td>Químico — Residuos de grasa en vagones</td></tr>
-      <tr><td><b>Criterio</b></td><td>Usar únicamente grasa de grado alimentario</td></tr>
-      <tr><td><b>Monitoreo</b></td><td>Inspección visual semanal</td></tr>
-      <tr><td><b>Responsable</b></td><td>Responsable de Producción</td></tr>
-      <tr><td><b>Acción correctiva</b></td><td>Sustituir por grasa de grado alimentario equivalente</td></tr>
-      <tr><td><b>Registros</b></td><td>Orden mantenimiento · Ficha técnica grasa · Nota salida almacén</td></tr>
-    </table>
+  <div class="ph">
+    <h2>🎯 Control de Puntos Críticos de Control</h2>
+    <p>Principios 2–5 · RM 449-2006-MINSA · DIGESA · Aceite Crudo de Palma — OLPASA</p>
+  </div>
+
+  <!-- BANNER -->
+  <div style="background:linear-gradient(135deg,#0d3b11,#2e7d32);border-radius:14px;padding:20px 24px;margin-bottom:18px;color:#fff;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+    <div>
+      <div style="font-size:18px;font-weight:800;margin-bottom:4px;">📋 Plan HACCP — OLPASA-SIG-L-001 · Validado DIGESA</div>
+      <div style="font-size:12px;opacity:.8;">Línea: Aceite Crudo de Palma (CPO) · 12 etapas · RM 449-2006-MINSA · Versión vigente</div>
+    </div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;">
+      <div style="background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);border-radius:10px;padding:10px 16px;text-align:center;">
+        <div style="font-size:22px;font-weight:800;">1</div><div style="font-size:11px;opacity:.8;">PCC Identificado</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);border-radius:10px;padding:10px 16px;text-align:center;">
+        <div style="font-size:22px;font-weight:800;">12</div><div style="font-size:11px;opacity:.8;">Etapas Proceso</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);border-radius:10px;padding:10px 16px;text-align:center;">
+        <div style="font-size:22px;font-weight:800;">✅</div><div style="font-size:11px;opacity:.8;">Validado DIGESA</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ALERTA PCC -->
+  <div class="alert alert-yellow" style="margin-bottom:16px;">
+    🎯 <b>PCC Identificado — Etapa de SECADO:</b> Árbol de decisiones (Anexo 3 RM 449-2006-MINSA) determinó 1 PCC en el proceso de extracción de Aceite Crudo de Palma. Control efectivo del tiempo y temperatura durante el secado es crítico para garantizar la inocuidad.
+  </div>
+
+  <!-- FORMATO 1: ANÁLISIS DE PELIGROS -->
+  <div class="tbl-wrap" style="margin-bottom:18px;">
+    <div class="tbl-head">
+      <h3>📋 Formato 1 — Análisis de Peligros por Etapa (Art. 22 · Principio 1)</h3>
+      <span style="font-size:11px;color:#888;">Anexo 4 · RM 449-2006-MINSA · OLPASA-SIG-L-001</span>
+    </div>
+    <div style="overflow-x:auto;">
+      <table style="width:100%;border-collapse:collapse;font-size:12px;">
+        <thead>
+          <tr style="background:#1b5e20;color:#fff;">
+            <th style="padding:10px 8px;">Etapa</th>
+            <th style="padding:10px 8px;">Tipo</th>
+            <th style="padding:10px 8px;">Peligro Identificado</th>
+            <th style="padding:10px 8px;text-align:center;">¿Significativo?</th>
+            <th style="padding:10px 8px;">Medida Preventiva</th>
+            <th style="padding:10px 8px;text-align:center;">¿Es PCC?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid #f0f0f0;">
+            <td style="padding:9px 8px;font-weight:700;">P1. Pesaje / Recepción</td>
+            <td style="padding:9px 8px;">⚫ Físico</td>
+            <td style="padding:9px 8px;">Partículas madera/metal/piedras · RFF verde · Pedúnculos</td>
+            <td style="padding:9px 8px;text-align:center;"><span class="tag tag-gray">No</span></td>
+            <td style="padding:9px 8px;font-size:11px;">Inspección visual · OLPASA-AQ-ME-001 · OLPASA-MP-E-001</td>
+            <td style="padding:9px 8px;text-align:center;"><span class="tag tag-green">No — BPM</span></td>
+          </tr>
+          <tr style="border-bottom:1px solid #f0f0f0;background:#fafffe;">
+            <td style="padding:9px 8px;font-weight:700;">P2. Descarga / Tolvas</td>
+            <td style="padding:9px 8px;">⚫ Físico</td>
+            <td style="padding:9px 8px;">Agentes físicos y químicos en RFF · Contaminación cruzada</td>
+            <td style="padding:9px 8px;text-align:center;"><span class="tag tag-gray">No</span></td>
+            <td style="padding:9px 8px;font-size:11px;">Evaluación calidad RFF · OLPASA-AQ-F-002</td>
+            <td style="padding:9px 8px;text-align:center;"><span class="tag tag-green">No — BPM</span></td>
+          </tr>
+          <tr style="border-bottom:1px solid #f0f0f0;">
+            <td style="padding:9px 8px;font-weight:700;">P3. Llenado Vagones / Esterilizado</td>
+            <td style="padding:9px 8px;">🔴 Biológico</td>
+            <td style="padding:9px 8px;">Supervivencia microbiana por parámetros inadecuados de cocción</td>
+            <td style="padding:9px 8px;text-align:center;"><span class="tag tag-gray">No</span></td>
+            <td style="padding:9px 8px;font-size:11px;">Control presión/tiempo · OLPASA-PR-I-02 · OLPASA-PR-F-001</td>
+            <td style="padding:9px 8px;text-align:center;"><span class="tag tag-green">No — BPM</span></td>
+          </tr>
+          <tr style="border-bottom:1px solid #f0f0f0;background:#fafffe;">
+            <td style="padding:9px 8px;font-weight:700;">P4. Desfrutado</td>
+            <td style="padding:9px 8px;">⚫ Físico</td>
+            <td style="padding:9px 8px;">Partículas metálicas del tambor rotatorio</td>
+            <td style="padding:9px 8px;text-align:center;"><span class="tag tag-gray">No</span></td>
+            <td style="padding:9px 8px;font-size:11px;">Mantenimiento preventivo · OLPASA-PR-I-03</td>
+            <td style="padding:9px 8px;text-align:center;"><span class="tag tag-green">No — BPM</span></td>
+          </tr>
+          <tr style="border-bottom:1px solid #f0f0f0;">
+            <td style="padding:9px 8px;font-weight:700;">P5. Digestión / Malaxado</td>
+            <td style="padding:9px 8px;">⚫ Físico</td>
+            <td style="padding:9px 8px;">Partículas metal del digestor · Contaminación mecánica</td>
+            <td style="padding:9px 8px;text-align:center;"><span class="tag tag-gray">No</span></td>
+            <td style="padding:9px 8px;font-size:11px;">Control T° >90°C / 30 min · Mantenimiento · OLPASA-PR-I-07</td>
+            <td style="padding:9px 8px;text-align:center;"><span class="tag tag-green">No — BPM</span></td>
+          </tr>
+          <tr style="border-bottom:1px solid #f0f0f0;background:#fafffe;">
+            <td style="padding:9px 8px;font-weight:700;">P6. Prensado</td>
+            <td style="padding:9px 8px;">🟡 Químico</td>
+            <td style="padding:9px 8px;">FFA elevado por oxidación · Contaminantes mecánicos</td>
+            <td style="padding:9px 8px;text-align:center;"><span class="tag tag-gray">No</span></td>
+            <td style="padding:9px 8px;font-size:11px;">Control parámetros prensas · BPM · OLPASA-PR-I-05</td>
+            <td style="padding:9px 8px;text-align:center;"><span class="tag tag-green">No — BPM</span></td>
+          </tr>
+          <tr style="border-bottom:1px solid #f0f0f0;">
+            <td style="padding:9px 8px;font-weight:700;">P7. Tamizado</td>
+            <td style="padding:9px 8px;">⚫ Físico</td>
+            <td style="padding:9px 8px;">Sólidos suspendidos · Fibras residuales</td>
+            <td style="padding:9px 8px;text-align:center;"><span class="tag tag-gray">No</span></td>
+            <td style="padding:9px 8px;font-size:11px;">Mallas 20 y 30 mesh · Revisión periódica</td>
+            <td style="padding:9px 8px;text-align:center;"><span class="tag tag-green">No — BPM</span></td>
+          </tr>
+          <tr style="border-bottom:1px solid #f0f0f0;background:#fafffe;">
+            <td style="padding:9px 8px;font-weight:700;">P8. Clarificación</td>
+            <td style="padding:9px 8px;">🟡 Químico</td>
+            <td style="padding:9px 8px;">Impurezas residuales · Lodos en aceite — Impurezas máx 0.2%</td>
+            <td style="padding:9px 8px;text-align:center;"><span class="tag tag-gray">No</span></td>
+            <td style="padding:9px 8px;font-size:11px;">Decantador ALFA LAVAL · Control flujo 12.7 m³/h · Lab</td>
+            <td style="padding:9px 8px;text-align:center;"><span class="tag tag-green">No — POES</span></td>
+          </tr>
+          <tr style="border-bottom:1px solid #f0f0f0;">
+            <td style="padding:9px 8px;font-weight:700;">P9. Sedimentado</td>
+            <td style="padding:9px 8px;">🔴 Biológico</td>
+            <td style="padding:9px 8px;">Crecimiento microbiano en tanques pre-sedimentador</td>
+            <td style="padding:9px 8px;text-align:center;"><span class="tag tag-gray">No</span></td>
+            <td style="padding:9px 8px;font-size:11px;">Control T° 85°C / 2 horas · POES limpieza tanques</td>
+            <td style="padding:9px 8px;text-align:center;"><span class="tag tag-green">No — POES</span></td>
+          </tr>
+          <tr style="border-bottom:1px solid #f0f0f0;background:#fff8e1;">
+            <td style="padding:9px 8px;font-weight:800;color:#e65100;">⭐ P10. SECADO</td>
+            <td style="padding:9px 8px;font-weight:700;">🔴 Biológico</td>
+            <td style="padding:9px 8px;font-weight:700;">Desarrollo microbiano por humedad residual elevada en aceite · Deterioro calidad CPO</td>
+            <td style="padding:9px 8px;text-align:center;"><span class="tag tag-red">SÍ</span></td>
+            <td style="padding:9px 8px;font-size:11px;font-weight:700;">Control T° y tiempo secado · Calibración termómetros · Análisis microbiológico</td>
+            <td style="padding:9px 8px;text-align:center;"><span class="tag tag-red" style="background:#ffebee;color:#c62828;font-weight:800;">✅ PCC #1</span></td>
+          </tr>
+          <tr style="border-bottom:1px solid #f0f0f0;">
+            <td style="padding:9px 8px;font-weight:700;">P11. Almacenamiento</td>
+            <td style="padding:9px 8px;">🔴 Biológico</td>
+            <td style="padding:9px 8px;">Contaminación cruzada · Oxidación FFA en tanques</td>
+            <td style="padding:9px 8px;text-align:center;"><span class="tag tag-gray">No</span></td>
+            <td style="padding:9px 8px;font-size:11px;">Control T° tanques · POES limpieza · Análisis lab periódico</td>
+            <td style="padding:9px 8px;text-align:center;"><span class="tag tag-green">No — POES</span></td>
+          </tr>
+          <tr>
+            <td style="padding:9px 8px;font-weight:700;">P12. Despacho</td>
+            <td style="padding:9px 8px;">🟡 Químico</td>
+            <td style="padding:9px 8px;">Contaminación en cisterna isotérmica · Material extraño</td>
+            <td style="padding:9px 8px;text-align:center;"><span class="tag tag-gray">No</span></td>
+            <td style="padding:9px 8px;font-size:11px;">Inspección cisterna · POES transporte · OLPASA-PR-I-08</td>
+            <td style="padding:9px 8px;text-align:center;"><span class="tag tag-green">No — POES</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- FORMATO 2: ÁRBOL DE DECISIONES -->
+  <div class="tbl-wrap" style="margin-bottom:18px;">
+    <div class="tbl-head">
+      <h3>📋 Formato 2 — Árbol de Decisiones PCC (Art. 23 · Principio 2)</h3>
+      <span style="font-size:11px;color:#888;">4 preguntas · Anexo 3 RM 449-2006-MINSA</span>
+    </div>
+    <div style="overflow-x:auto;">
+      <table style="width:100%;border-collapse:collapse;font-size:12px;">
+        <thead>
+          <tr style="background:#1b5e20;color:#fff;">
+            <th style="padding:10px 8px;">Etapa</th>
+            <th style="padding:10px 8px;">Peligro Significativo</th>
+            <th style="padding:10px 8px;text-align:center;">P1<br><span style="font-size:10px;opacity:.8;">¿Medida preventiva?</span></th>
+            <th style="padding:10px 8px;text-align:center;">P2<br><span style="font-size:10px;opacity:.8;">¿Etapa elimina?</span></th>
+            <th style="padding:10px 8px;text-align:center;">P3<br><span style="font-size:10px;opacity:.8;">¿Supera nivel?</span></th>
+            <th style="padding:10px 8px;text-align:center;">P4<br><span style="font-size:10px;opacity:.8;">¿Etapa posterior elimina?</span></th>
+            <th style="padding:10px 8px;text-align:center;">Resultado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background:#fff8e1;border-bottom:1px solid #ffe082;">
+            <td style="padding:9px 8px;font-weight:800;color:#e65100;">⭐ Secado</td>
+            <td style="padding:9px 8px;font-weight:700;">B — Desarrollo microbiano / humedad residual</td>
+            <td style="padding:9px 8px;text-align:center;"><span class="tag tag-green">Sí</span></td>
+            <td style="padding:9px 8px;text-align:center;"><span class="tag tag-green">Sí</span></td>
+            <td style="padding:9px 8px;text-align:center;"><span class="tag tag-red">Sí</span></td>
+            <td style="padding:9px 8px;text-align:center;"><span class="tag tag-red">No</span></td>
+            <td style="padding:9px 8px;text-align:center;"><span class="tag tag-red" style="font-weight:800;">✅ PCC #1</span></td>
+          </tr>
+          <tr style="border-bottom:1px solid #f0f0f0;background:#fafffe;">
+            <td style="padding:9px 8px;font-weight:700;">Esterilizado</td>
+            <td style="padding:9px 8px;">B — Supervivencia microbiana</td>
+            <td style="padding:9px 8px;text-align:center;"><span class="tag tag-green">Sí</span></td>
+            <td style="padding:9px 8px;text-align:center;"><span class="tag tag-green">Sí</span></td>
+            <td style="padding:9px 8px;text-align:center;"><span class="tag tag-gray">—</span></td>
+            <td style="padding:9px 8px;text-align:center;"><span class="tag tag-gray">—</span></td>
+            <td style="padding:9px 8px;text-align:center;"><span class="tag tag-green">No PCC — BPM</span></td>
+          </tr>
+          <tr style="background:#e8f5e9;">
+            <td colspan="6" style="padding:10px 12px;font-size:12px;color:#2e7d32;font-weight:600;">
+              ✅ Conclusión: Se determina 1 PCC en la etapa de SECADO. Las demás etapas controladas por Requisitos Previos (BPM + POES). Base: OLPASA-SIG-L-001 · RM 449-2006-MINSA
+            </td>
+            <td style="padding:10px;text-align:center;background:#e8f5e9;"><span class="tag tag-red" style="font-weight:800;">1 PCC</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- LÍMITES CRÍTICOS PCC #1 SECADO -->
+  <div class="block">
+    <h3>⚙️ PCC #1 — Secado: Límites Críticos (Art. 24 · Principio 3 · RM 449-2006-MINSA)</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:4px;">
+      <div style="background:#fff8e1;border:2px solid #f59e0b;border-radius:10px;padding:14px;text-align:center;">
+        <div style="font-size:11px;color:#888;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Temperatura Mínima</div>
+        <div style="font-size:28px;font-weight:800;color:#e65100;">80°C</div>
+        <div style="font-size:11px;color:#888;">Límite crítico inferior</div>
+      </div>
+      <div style="background:#fff8e1;border:2px solid #f59e0b;border-radius:10px;padding:14px;text-align:center;">
+        <div style="font-size:11px;color:#888;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Temperatura Máxima</div>
+        <div style="font-size:28px;font-weight:800;color:#e65100;">90°C</div>
+        <div style="font-size:11px;color:#888;">Límite crítico superior</div>
+      </div>
+      <div style="background:#fff8e1;border:2px solid #f59e0b;border-radius:10px;padding:14px;text-align:center;">
+        <div style="font-size:11px;color:#888;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Tiempo Mínimo</div>
+        <div style="font-size:28px;font-weight:800;color:#e65100;">120 min</div>
+        <div style="font-size:11px;color:#888;">Duración mínima del secado</div>
+      </div>
+      <div style="background:#fff8e1;border:2px solid #f59e0b;border-radius:10px;padding:14px;text-align:center;">
+        <div style="font-size:11px;color:#888;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Humedad Máxima</div>
+        <div style="font-size:28px;font-weight:800;color:#e65100;">0.1%</div>
+        <div style="font-size:11px;color:#888;">Humedad residual en CPO</div>
+      </div>
+      <div style="background:#fff8e1;border:2px solid #f59e0b;border-radius:10px;padding:14px;text-align:center;">
+        <div style="font-size:11px;color:#888;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Impurezas Máximas</div>
+        <div style="font-size:28px;font-weight:800;color:#e65100;">0.1%</div>
+        <div style="font-size:11px;color:#888;">Impurezas en CPO</div>
+      </div>
+      <div style="background:#f0fdf4;border:2px solid #a5d6a7;border-radius:10px;padding:14px;text-align:center;">
+        <div style="font-size:11px;color:#888;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Responsable Vigilancia</div>
+        <div style="font-size:14px;font-weight:800;color:#1b5e20;">👤 Gestor de Producción</div>
+        <div style="font-size:11px;color:#888;">+ Operador de Clarificación</div>
+      </div>
+    </div>
+    <div style="margin-top:12px;background:#e3f2fd;border-left:4px solid #1565c0;border-radius:0 8px 8px 0;padding:10px 14px;font-size:12px;color:#1565c0;">
+      <b>📌 Registros requeridos (Art. 28):</b> Parte de Producción · Área de Clarificación · Certificados de calibración de termómetros · Certificados de análisis microbiológico · OLPASA-PR-F-001
+    </div>
   </div>
 </div>
-
 <!-- VIGILANCIA -->
 <div class="page" id="page-vigilancia">
   <div class="ph">
@@ -1031,7 +1263,7 @@ tr:hover td{background:#fafffe;}
         </select>
       </div>
       <div style="display:flex;align-items:center;justify-content:space-between;background:#fafafa;border:1px solid #e0e0e0;border-radius:10px;padding:10px 14px;">
-        <span style="font-size:13px;font-weight:600;">Registro de mantenimiento completado</span>
+        <span style="font-size:13px;font-weight:600;">Humedad del aceite ≤ 0.1%</span>
         <select id="ppro-mant" style="border:1px solid #ddd;border-radius:8px;padding:5px 10px;font-size:13px;">
           <option value="">Seleccionar</option><option value="si">✅ Sí</option><option value="no">❌ No</option>
         </select>
@@ -4827,8 +5059,16 @@ function docCount(key){ return (DOCS[key]||[]).length; }
 function docVig(key){ return (DOCS[key]||[]).filter(d=>state[d.code]?.semaforo==='vigente').length; }
 function anyDocs(...keys){ return keys.some(k=>docCount(k)>0); }
 function score(condiciones){ 
-  // condiciones: array de {cumple: bool, peso: 0|1|2}
-  return condiciones.reduce((sum,c)=> sum + (c.cumple ? c.peso : 0), 0);
+  // condiciones: array de {cumple: bool|'parcial', peso: número}
+  // Escala: Cumple=3pts · Parcial=1pt · No cumple=0pts
+  return condiciones.reduce((sum,c)=> {
+    if(c.cumple === true) return sum + (c.peso * 3);
+    if(c.cumple === 'parcial') return sum + (c.peso * 1);
+    return sum;
+  }, 0);
+}
+function scoreMax(condiciones){
+  return condiciones.reduce((sum,c)=> sum + (c.peso * 3), 0);
 }
 
 
@@ -5138,15 +5378,15 @@ function calcAuditor(){
   // Semáforo
   const sem = document.getElementById('aud-semaforo');
   if(sem){
-    if(pctGeneral>=78) sem.innerHTML = '🟢 APROBADO — Sistema conforme';
-    else if(pctGeneral>=60) sem.innerHTML = '🟡 EN PROCESO — Subsanar observaciones';
-    else sem.innerHTML = '🔴 NO CONFORME — Requiere acción inmediata';
-    sem.style.color = pctGeneral>=78?'#2e7d32':pctGeneral>=60?'#e65100':'#c62828';
+    if(pctGeneral>=90) sem.innerHTML = '🟢 CONFORME — Sistema funcionando óptimo';
+    else if(pctGeneral>=75) sem.innerHTML = '🟡 MANTENIMIENTO — Seguimiento requerido';
+    else sem.innerHTML = '🔴 ALERTA — Riesgo para mantener validación DIGESA';
+    sem.style.color = pctGeneral>=90?'#2e7d32':pctGeneral>=75?'#e65100':'#c62828';
   }
 
   // Colorear KPI score
   const kpiScore = document.querySelector('#aud-kpis .kpi:nth-child(1)');
-  if(kpiScore) kpiScore.className = 'kpi '+(pctGeneral>=78?'kpi-ok':pctGeneral>=60?'kpi-warn':'kpi-error');
+  if(kpiScore) kpiScore.className = 'kpi '+(pctGeneral>=90?'kpi-ok':pctGeneral>=75?'kpi-warn':'kpi-error');
 
   // Historial
   renderHistorialAud();
@@ -5164,7 +5404,7 @@ function audGuardarMes(){
   if(idx>=0) hist[idx]=entry; else hist.unshift(entry);
   localStorage.setItem('haccp-aud-hist', JSON.stringify(hist.slice(0,24)));
   renderHistorialAud();
-  alert('✅ Resultado del mes guardado: '+mes+' — '+pct+' ('+score+'/164)');
+  showToast('✅ Resultado guardado: '+mes+' — '+pct);
 }
 
 function renderHistorialAud(){
@@ -5187,8 +5427,8 @@ function renderHistorialAud(){
     <tbody>
     ${hist.map(h=>{
       const p=parseInt(h.pct);
-      const sem=p>=78?'🟢 Aprobado':p>=60?'🟡 En proceso':'🔴 No conforme';
-      const bg=p>=78?'#e8f5e9':p>=60?'#fff8e1':'#ffebee';
+      const sem=p>=90?'🟢 Conforme':p>=75?'🟡 Mantenimiento':'🔴 Alerta';
+      const bg=p>=90?'#e8f5e9':p>=75?'#fff8e1':'#ffebee';
       return `<tr style="background:${bg};border-bottom:1px solid #e0e0e0;">
         <td style="padding:8px;font-weight:600;">${h.mes}</td>
         <td style="padding:8px;text-align:center;font-weight:800;">${h.score}/164</td>
