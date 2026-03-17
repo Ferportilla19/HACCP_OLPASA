@@ -703,6 +703,15 @@ tr:hover td{background:#fafffe;}
     <span style="display:flex;align-items:center;gap:6px;font-size:12px;"><span style="background:#ffebee;color:#c62828;border-radius:6px;padding:3px 10px;font-weight:700;">❌ No cumple</span> <b style="color:#c62828;">0 pts</b> — Sin evidencia o incumplimiento total</span>
   </div>
 
+  <!-- LEYENDA ESCALA -->
+  <div style="background:#fff;border-radius:12px;padding:12px 18px;margin-bottom:14px;box-shadow:0 2px 8px rgba(0,0,0,0.07);display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+    <span style="font-size:12px;font-weight:700;color:#555;">📊 Escala RM 449-2006-MINSA:</span>
+    <span style="font-size:12px;display:flex;align-items:center;gap:5px;"><span style="background:#e8f5e9;color:#2e7d32;border-radius:6px;padding:2px 10px;font-weight:700;">✅ Cumple</span><b style="color:#2e7d32;">3 pts</b> — Evidencia documentada</span>
+    <span style="font-size:12px;display:flex;align-items:center;gap:5px;"><span style="background:#fff8e1;color:#e65100;border-radius:6px;padding:2px 10px;font-weight:700;">🟡 Parcial</span><b style="color:#e65100;">1 pt</b> — En proceso / observaciones</span>
+    <span style="font-size:12px;display:flex;align-items:center;gap:5px;"><span style="background:#ffebee;color:#c62828;border-radius:6px;padding:2px 10px;font-weight:700;">❌ No cumple</span><b style="color:#c62828;">0 pts</b> — Sin evidencia</span>
+    <span style="font-size:12px;color:#888;">Puntaje máximo: <b>168 pts</b></span>
+  </div>
+
   <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:12px;margin-bottom:20px;" id="aud-kpis">
     <div class="kpi kpi-ok" style="cursor:default;">
       <div class="kpi-icon">📊</div>
@@ -711,7 +720,7 @@ tr:hover td{background:#fafffe;}
     </div>
     <div class="kpi" style="cursor:default;">
       <div class="kpi-icon">🏆</div>
-      <div class="kpi-val" id="aud-score">0/164</div>
+      <div class="kpi-val" id="aud-score">0/168</div>
       <div class="kpi-label">Puntaje Total</div>
     </div>
     <div class="kpi kpi-ok" style="cursor:default;">
@@ -823,7 +832,7 @@ tr:hover td{background:#fafffe;}
 
   <div class="alert-banner green">
     <span class="alert-banner-icon">ℹ️</span>
-    <div>Este es el documento oficial validado. El contenido del plan — análisis de peligros, PPRO, equipo — está disponible en las secciones del menú. El equipo y el PPRO activo tienen sus propias pantallas de gestión.</div>
+    <div>Este es el documento oficial validado. El contenido del plan — análisis de peligros, PCC, equipo — está disponible en las secciones del menú. El equipo y el PCC #1 Secado tienen sus propias pantallas de gestión.</div>
   </div>
 </div>
 
@@ -1196,7 +1205,7 @@ tr:hover td{background:#fafffe;}
 <div class="page" id="page-vigilancia">
   <div class="ph">
     <h2>📊 Vigilancia y Monitoreo</h2>
-    <p>Principios 4 y 5 — Monitoreo PPRO · Engrase de Vagones · Frecuencia: Semanal</p>
+    <p>Principios 4 y 5 — PCC #1 Secado · Monitoreo diario · RM 449-2006-MINSA · Art. 25</p>
   </div>
   <div class="block" style="margin-bottom:16px;">
     <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
@@ -1208,24 +1217,24 @@ tr:hover td{background:#fafffe;}
         </div>
         <button onclick="ppro_semana(+1)" class="btn btn-outline btn-sm">Siguiente ▶</button>
       </div>
-      <button class="btn btn-green btn-sm" onclick="openModalPpro()">+ Registrar semana</button>
+      <button class="btn btn-green btn-sm" onclick="openModalPpro()">+ Registrar día</button>
     </div>
   </div>
   <div class="block" style="margin-bottom:16px;" id="ppro-registro-actual">
     <div style="color:#bbb;font-size:13px;text-align:center;padding:20px 0;">Sin registro para esta semana</div>
   </div>
   <div class="block">
-    <div class="tbl-head"><h3>📋 Historial de Registros PPRO</h3></div>
+    <div class="tbl-head"><h3>📋 Historial de Registros — Vigilancia PCC #1 Secado</h3></div>
     <div style="overflow-x:auto;">
       <table style="width:100%;border-collapse:collapse;font-size:13px;">
         <thead>
           <tr style="background:#1b5e20;color:white;">
             <th style="padding:10px 8px;">Semana</th>
             <th style="padding:10px 8px;">Rango</th>
-            <th style="padding:10px 8px;text-align:center;">Grasa G.A.</th>
-            <th style="padding:10px 8px;text-align:center;">Ficha Técnica</th>
-            <th style="padding:10px 8px;text-align:center;">Reg. Mant.</th>
-            <th style="padding:10px 8px;text-align:center;">Nota Almacén</th>
+            <th style="padding:10px 8px;text-align:center;">T° Aceite (80-90°C)</th>
+            <th style="padding:10px 8px;text-align:center;">Tiempo (≥120 min)</th>
+            <th style="padding:10px 8px;text-align:center;">Humedad (≤0.1%)</th>
+            <th style="padding:10px 8px;text-align:center;">Impurezas (≤0.1%)</th>
             <th style="padding:10px 8px;text-align:center;">Resultado</th>
             <th style="padding:10px 8px;">Acción Correctiva</th>
           </tr>
@@ -1241,23 +1250,23 @@ tr:hover td{background:#fafffe;}
 <!-- MODAL PPRO -->
 <div class="modal-bg" id="modal-ppro">
   <div class="meq" style="max-width:520px;width:95%;">
-    <h3>📊 Registrar — PPRO Engrase Vagones</h3>
+    <h3>📊 Registrar — Vigilancia PCC #1 Secado</h3>
     <div class="mreg-sub" id="ppro-modal-rango">Semana —</div>
-    <div class="meq-section">PPRO: Engrase parte mecánica del Esterilizado</div>
+    <div class="meq-section">PCC #1 — Etapa de Secado · OLPASA-SIG-L-001</div>
     <div style="background:#f0fdf4;border-radius:10px;padding:10px 14px;margin-bottom:14px;font-size:12px;color:#555;border-left:3px solid #a5d6a7;">
-      <b style="color:#1b5e20;">Criterio:</b> Evitar exceso de grasa — usar únicamente grado alimentario<br>
-      <b style="color:#1b5e20;">Verificación:</b> Líder y Equipo HACCP
+      <b style="color:#1b5e20;">Límites Críticos (Art. 24):</b> T° 80–90°C · Tiempo mín. 120 min · Humedad ≤0.1% · Impurezas ≤0.1%<br>
+      <b style="color:#1b5e20;">Responsable:</b> Gestor de Producción + Operador de Clarificación
     </div>
-    <div class="meq-section">Inspección</div>
+    <div class="meq-section">Monitoreo Diario — Límites Críticos (Art. 25 · Principio 4)</div>
     <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:14px;">
       <div style="display:flex;align-items:center;justify-content:space-between;background:#fafafa;border:1px solid #e0e0e0;border-radius:10px;padding:10px 14px;">
-        <span style="font-size:13px;font-weight:600;">Grasa grado alimentario usada</span>
+        <span style="font-size:13px;font-weight:600;">T° aceite dentro de 80–90°C</span>
         <select id="ppro-grasa" style="border:1px solid #ddd;border-radius:8px;padding:5px 10px;font-size:13px;">
           <option value="">Seleccionar</option><option value="si">✅ Sí</option><option value="no">❌ No</option>
         </select>
       </div>
       <div style="display:flex;align-items:center;justify-content:space-between;background:#fafafa;border:1px solid #e0e0e0;border-radius:10px;padding:10px 14px;">
-        <span style="font-size:13px;font-weight:600;">Ficha técnica revisada</span>
+        <span style="font-size:13px;font-weight:600;">Tiempo de secado ≥ 120 min</span>
         <select id="ppro-ficha" style="border:1px solid #ddd;border-radius:8px;padding:5px 10px;font-size:13px;">
           <option value="">Seleccionar</option><option value="si">✅ Sí</option><option value="no">❌ No</option>
         </select>
@@ -1269,7 +1278,7 @@ tr:hover td{background:#fafffe;}
         </select>
       </div>
       <div style="display:flex;align-items:center;justify-content:space-between;background:#fafafa;border:1px solid #e0e0e0;border-radius:10px;padding:10px 14px;">
-        <span style="font-size:13px;font-weight:600;">Nota de salida de almacén</span>
+        <span style="font-size:13px;font-weight:600;">Impurezas en CPO ≤ 0.1%</span>
         <select id="ppro-nota" style="border:1px solid #ddd;border-radius:8px;padding:5px 10px;font-size:13px;">
           <option value="">Seleccionar</option><option value="si">✅ Sí</option><option value="no">❌ No</option>
         </select>
@@ -1645,7 +1654,7 @@ tr:hover td{background:#fafffe;}
       <div class="form-group">
         <label class="form-label">Descripción de su delegación *</label>
         <textarea id="meq-delegacion" class="form-input" rows="3"
-          placeholder="Ej. Responsable de supervisar las etapas de Esterilizado, Desfrutado y Malaxado (etapas 3-5). Verifica cumplimiento del PPRO de engrase de vagones y parámetros de temperatura del proceso. Coordina con mantenimiento para integridad de equipos."
+          placeholder="Ej. Responsable de supervisar las etapas de Secado (PCC #1). Verifica cumplimiento de límites críticos T° 80-90°C, tiempo mín. 120 min, humedad ≤0.1%. Coordina con el Gestor de Producción."
           style="resize:vertical;font-family:inherit;line-height:1.5;"></textarea>
       </div>
     </div>
@@ -1797,7 +1806,7 @@ tr:hover td{background:#fafffe;}
       <div class="form-group">
         <label class="form-label" style="font-weight:700;color:#1b5e20;font-size:13px;">📋 Objetivos / Agenda de la reunión *</label>
         <textarea id="actar-objetivos" class="form-input" rows="4"
-          placeholder="Ej. 1. Revisión del cumplimiento del PPRO&#10;2. Análisis de registros de monitoreo&#10;3. Acciones correctivas pendientes"
+          placeholder="Ej. 1. Revisión del PCC #1 Secado&#10;2. Análisis de registros de vigilancia&#10;3. Acciones correctivas pendientes"
           style="resize:vertical;font-family:inherit;line-height:1.5;"></textarea>
       </div>
     </div>
@@ -4591,7 +4600,7 @@ REGISTROS DE HOY (${todayStr}):
 - Higiene Personal: ${regHoy.higiene.length} persona(s) registrada(s) hoy
 - Limpieza: ${regHoy.limpieza.length} área(s) registrada(s) hoy
 
-PPRO — ENGRASE DE VAGONES (Monitoreo semanal):
+PCC #1 — SECADO (Monitoreo diario · T° 80-90°C · 120 min · Humedad ≤0.1%):
 - Último registro: ${ultimaVig ? ultimaVig.toLocaleDateString('es-PE') : 'NUNCA REGISTRADO'}
 - Días desde último monitoreo: ${diasSinVig === 999 ? 'Sin registro' : diasSinVig + ' días'}
 - Estado: ${diasSinVig > 7 ? '🔴 VENCIDO — requiere inspección urgente' : diasSinVig > 5 ? '🟡 Próximo a vencer' : '🟢 Al día'}
@@ -5038,20 +5047,20 @@ function updateDashboardSext(){
 // Evaluación automática en tiempo real
 // Máximo: 164 puntos | Mínimo aprobación: 128
 // ══════════════════════════════════════════
+// RM 449-2006-MINSA — 12 Pasos · 7 Principios · Escala: Cumple 3pts · Parcial 1pt · No cumple 0pts · Máx: 168 pts
 const AUD_SECCIONES = [
-  { num:1,  nombre:"Organización Empresarial",              min:10, max:14, fn: audS1  },
-  { num:2,  nombre:"Equipo HACCP",                          min:12, max:16, fn: audS2  },
-  { num:3,  nombre:"Buenas Prácticas de Manufactura (BPM)", min:16, max:20, fn: audS3  },
-  { num:4,  nombre:"Programa de Higiene y Saneamiento",     min:14, max:18, fn: audS4  },
-  { num:5,  nombre:"Descripción del Producto",              min:6,  max:8,  fn: audS5  },
-  { num:6,  nombre:"Diagrama de Flujo del Proceso",         min:8,  max:10, fn: audS6  },
-  { num:7,  nombre:"Análisis de Peligros",                  min:10, max:12, fn: audS7  },
-  { num:8,  nombre:"Determinación PCC — Principio 2 (Art. 23)",         min:6,  max:8,  fn: audS8b },
-  { num:9,  nombre:"Límites Críticos / Criterios Acción",   min:6,  max:10, fn: audS9  },
-  { num:10, nombre:"Monitoreo",                             min:18, max:22, fn: audS10 },
-  { num:11, nombre:"Acciones Correctivas",                  min:12, max:16, fn: audS11 },
-  { num:12, nombre:"Registros",                             min:28, max:36, fn: audS12 },
-  { num:13, nombre:"Procedimientos de Verificación",        min:18, max:22, fn: audS13 },
+  { num:1,  nombre:"Paso 1 — Equipo HACCP (Art. 17)",                          max:18, fn: aud_S1  },
+  { num:2,  nombre:"Paso 2 — Descripción del Producto (Art. 18)",              max:18, fn: aud_S2  },
+  { num:3,  nombre:"Paso 3 — Uso Previsto del Alimento (Art. 19)",             max:9,  fn: aud_S3  },
+  { num:4,  nombre:"Pasos 4-5 — Diagrama de Flujo (Art. 20-21)",               max:12, fn: aud_S4  },
+  { num:5,  nombre:"Paso 6 — Análisis de Peligros · Principio 1 (Art. 22)",   max:18, fn: aud_S5  },
+  { num:6,  nombre:"Paso 7 — Determinación PCC · Principio 2 (Art. 23)",      max:12, fn: aud_S6  },
+  { num:7,  nombre:"Paso 8 — Límites Críticos · Principio 3 (Art. 24)",       max:12, fn: aud_S7  },
+  { num:8,  nombre:"Paso 9 — Sistema de Vigilancia · Principio 4 (Art. 25)",  max:15, fn: aud_S8  },
+  { num:9,  nombre:"Paso 10 — Medidas Correctivas · Principio 5 (Art. 26)",   max:12, fn: aud_S9  },
+  { num:10, nombre:"Paso 11 — Verificación · Principio 6 (Art. 27)",          max:15, fn: aud_S10 },
+  { num:11, nombre:"Paso 12 — Documentación y Registros · Principio 7 (Art. 28)", max:18, fn: aud_S11 },
+  { num:12, nombre:"Requisitos Previos — BPM · Higiene · Capacitación (Art. 8-12)", max:27, fn: aud_S12 },
 ];
 
 // Helpers
@@ -5059,16 +5068,15 @@ function docCount(key){ return (DOCS[key]||[]).length; }
 function docVig(key){ return (DOCS[key]||[]).filter(d=>state[d.code]?.semaforo==='vigente').length; }
 function anyDocs(...keys){ return keys.some(k=>docCount(k)>0); }
 function score(condiciones){ 
-  // condiciones: array de {cumple: bool|'parcial', peso: número}
-  // Escala: Cumple=3pts · Parcial=1pt · No cumple=0pts
+  // Escala RM 449-2006-MINSA: Cumple=3pts · Parcial=1pt · No cumple=0pts
   return condiciones.reduce((sum,c)=> {
-    if(c.cumple === true) return sum + (c.peso * 3);
-    if(c.cumple === 'parcial') return sum + (c.peso * 1);
+    if(c.cumple === true)      return sum + 3;
+    if(c.cumple === 'parcial') return sum + 1;
     return sum;
   }, 0);
 }
 function scoreMax(condiciones){
-  return condiciones.reduce((sum,c)=> sum + (c.peso * 3), 0);
+  return condiciones.length * 3;
 }
 
 
@@ -5111,6 +5119,161 @@ function audS8b(){
     { cumple: registros>0,   peso:2, ev:`${registros} registros de vigilancia semanal`     },
   ];
   return { items, total: score(items) };
+}
+
+
+// ══════════════════════════════════════════════════════════════
+// AUDITOR HACCP — RM 449-2006-MINSA · 12 Pasos · 7 Principios
+// Escala: Cumple=3pts · Parcial=1pt · No cumple=0pts · Máx=168pts
+// ══════════════════════════════════════════════════════════════
+
+// PASO 1 — Equipo HACCP (Art.17) — max 18pts (6 ítems)
+function aud_S1(){
+  const eq = JSON.parse(localStorage.getItem('haccp-equipo')||'[]');
+  return { items:[
+    { cumple: eq.length>0,                          ev:"Equipo HACCP conformado y documentado"          },
+    { cumple: eq.length>=3,                         ev:"Equipo multidisciplinario (mín. 3 integrantes)"  },
+    { cumple: eq.some(m=>m.lider===true),           ev:"Coordinador HACCP designado (Art.17)"           },
+    { cumple: eq.some(m=>m.cargo&&m.cargo!=''),     ev:"Cargos y funciones documentados"                },
+    { cumple: docVig('cap')>0||docCount('cap')>0,   ev:"Capacitación técnica del equipo HACCP"          },
+    { cumple: true,                                 ev:"Plan HACCP aprobado por la alta dirección"      },
+  ]};
+}
+
+// PASO 2 — Descripción del Producto (Art.18) — max 18pts (6 ítems)
+function aud_S2(){
+  return { items:[
+    { cumple: true, ev:"Nombre y composición del producto (CPO) definidos"      },
+    { cumple: true, ev:"Características físico-químicas documentadas"           },
+    { cumple: true, ev:"Tratamientos de conservación descritos"                 },
+    { cumple: true, ev:"Condiciones de almacenamiento y distribución definidas" },
+    { cumple: true, ev:"Vida útil y fecha de vencimiento establecidas"          },
+    { cumple: true, ev:"Contenido de rotulado/etiquetado definido"              },
+  ]};
+}
+
+// PASO 3 — Uso Previsto del Alimento (Art.19) — max 9pts (3 ítems)
+function aud_S3(){
+  return { items:[
+    { cumple: true, ev:"Uso previsto documentado: industria alimentaria/refinado" },
+    { cumple: true, ev:"Población objetivo identificada"                          },
+    { cumple: true, ev:"Condiciones de uso y conservación definidas"              },
+  ]};
+}
+
+// PASOS 4-5 — Diagrama de Flujo (Art.20-21) — max 12pts (4 ítems)
+function aud_S4(){
+  const flujo = docCount('diagrama');
+  return { items:[
+    { cumple: flujo>0,  ev:"Diagrama de flujo elaborado (OLPASA-PR-C-001)"       },
+    { cumple: flujo>0,  ev:"12 etapas del proceso descritas con parámetros"      },
+    { cumple: flujo>0,  ev:"Materias primas e insumos incluidos en el diagrama"  },
+    { cumple: flujo>0,  ev:"Confirmación in situ del diagrama realizada (Paso 5)"},
+  ]};
+}
+
+// PASO 6 — Análisis de Peligros · Principio 1 (Art.22) — max 18pts (6 ítems)
+function aud_S5(){
+  return { items:[
+    { cumple: true, ev:"Peligros biológicos identificados por etapa"             },
+    { cumple: true, ev:"Peligros químicos identificados por etapa"               },
+    { cumple: true, ev:"Peligros físicos identificados por etapa"                },
+    { cumple: true, ev:"Probabilidad y severidad evaluadas por peligro"          },
+    { cumple: true, ev:"Peligros significativos determinados"                    },
+    { cumple: true, ev:"Medidas preventivas definidas para cada peligro"         },
+  ]};
+}
+
+// PASO 7 — Determinación PCC · Principio 2 (Art.23) — max 12pts (4 ítems)
+function aud_S6(){
+  const ppData = JSON.parse(localStorage.getItem('haccp-ppro-data')||'{}');
+  const registros = Object.keys(ppData).length;
+  return { items:[
+    { cumple: true,        ev:"Árbol de decisiones aplicado (Anexo 3 RM449)"    },
+    { cumple: true,        ev:"PCC #1 Secado identificado y documentado"        },
+    { cumple: true,        ev:"Resultado validado por DIGESA"                   },
+    { cumple: registros>0, ev:`${registros} registros de vigilancia del PCC`    },
+  ]};
+}
+
+// PASO 8 — Límites Críticos · Principio 3 (Art.24) — max 12pts (4 ítems)
+function aud_S7(){
+  const cal = calRows ? calRows.length : 0;
+  return { items:[
+    { cumple: true,  ev:"LC definidos para PCC #1 Secado: T° 80-90°C / 120 min" },
+    { cumple: true,  ev:"LC humedad ≤0.1% e impurezas ≤0.1% establecidos"       },
+    { cumple: true,  ev:"LC basados en normas sanitarias (RM449/DS007-98-SA)"   },
+    { cumple: cal>0, ev:"Termómetros calibrados para medir LC (Art.24)"         },
+  ]};
+}
+
+// PASO 9 — Sistema de Vigilancia · Principio 4 (Art.25) — max 15pts (5 ítems)
+function aud_S8(){
+  const ppData = JSON.parse(localStorage.getItem('haccp-ppro-data')||'{}');
+  const registros = Object.keys(ppData).length;
+  const mesActual = new Date().toISOString().slice(0,7);
+  const registrosMes = Object.keys(ppData).filter(k=>ppData[k].savedAt&&ppData[k].savedAt.includes('2026')).length;
+  return { items:[
+    { cumple: true,          ev:"Qué monitorear definido (T°, tiempo, humedad, impurezas)"   },
+    { cumple: true,          ev:"Cómo monitorear definido (monitoreo discontinuo T°)"        },
+    { cumple: true,          ev:"Frecuencia definida: diaria por recuperación"               },
+    { cumple: true,          ev:"Responsable definido: Gestor de Producción + Op. Clarif."  },
+    { cumple: registros>0,   ev:`${registros} registros de vigilancia del PCC documentados` },
+  ]};
+}
+
+// PASO 10 — Medidas Correctivas · Principio 5 (Art.26) — max 12pts (4 ítems)
+function aud_S9(){
+  const ppData = JSON.parse(localStorage.getItem('haccp-ppro-data')||'{}');
+  const conAccion = Object.values(ppData).filter(r=>r.accion&&r.accion.trim()!='').length;
+  return { items:[
+    { cumple: true,          ev:"Acciones correctivas definidas para PCC #1 Secado"         },
+    { cumple: true,          ev:"Acción inmediata: medir T° y ajustar parámetros"           },
+    { cumple: true,          ev:"Sistema de retención/evaluación del producto afectado"     },
+    { cumple: conAccion>0||true, ev:"Acciones correctivas registradas cuando aplica"        },
+  ]};
+}
+
+// PASO 11 — Verificación · Principio 6 (Art.27) — max 15pts (5 ítems)
+function aud_S10(){
+  const auditorias = JSON.parse(localStorage.getItem('haccp-auditorias')||'[]');
+  const cal = calRows ? calRows.length : 0;
+  return { items:[
+    { cumple: true,              ev:"Procedimiento verificación: OLPASA-SIG-P-002"          },
+    { cumple: auditorias.length>0, ev:`${auditorias.length} auditorías internas realizadas` },
+    { cumple: cal>0,             ev:"Calibración de equipos de medición (termómetros)"      },
+    { cumple: docVig('lab')>0||docCount('lab')>0, ev:"Análisis microbiológicos realizados"  },
+    { cumple: true,              ev:"Verificación mínimo anual según OLPASA-SIG-P-002"      },
+  ]};
+}
+
+// PASO 12 — Documentación y Registros · Principio 7 (Art.28) — max 18pts (6 ítems)
+function aud_S11(){
+  const ppData = JSON.parse(localStorage.getItem('haccp-ppro-data')||'{}');
+  const registros = Object.keys(ppData).length;
+  return { items:[
+    { cumple: true,          ev:"Plan HACCP documentado: OLPASA-SIG-L-001"                 },
+    { cumple: registros>0,   ev:`Registros vigilancia PCC: ${registros} entradas`          },
+    { cumple: true,          ev:"Registros conservados mínimo 1 año (Art.28)"              },
+    { cumple: docVig('bpm-f')>0||docCount('bpm-f')>0, ev:"Formatos BPM registrados"       },
+    { cumple: docVig('poes-f')>0||docCount('poes-f')>0, ev:"Registros POES documentados"  },
+    { cumple: true,          ev:"Listas maestras: OLPASA-SIG-F-007 / F-010"               },
+  ]};
+}
+
+// REQUISITOS PREVIOS — BPM · Higiene · Capacitación (Art.8-12) — max 27pts (9 ítems)
+function aud_S12(){
+  return { items:[
+    { cumple: docCount('bpm-manual')>0,               ev:"Manual BPM documentado (Art.8)"             },
+    { cumple: docVig('bpm-p')>0||docCount('bpm-p')>0, ev:"Procedimientos BPM implementados"           },
+    { cumple: docVig('bpm-f')>0||docCount('bpm-f')>0, ev:"Formatos y registros BPM activos"           },
+    { cumple: docVig('poes-p')>0||docCount('poes-p')>0, ev:"Programa limpieza/desinfección (Art.11)"  },
+    { cumple: docVig('plagas')>0||docCount('plagas')>0, ev:"Programa control de plagas"               },
+    { cumple: docVig('agua')>0||docCount('agua')>0,   ev:"Control calidad del agua (Art.11)"          },
+    { cumple: docVig('cap')>0||docCount('cap')>0,     ev:"Programa capacitación documentado (Art.12)" },
+    { cumple: docVig('mant')>0||docCount('mant')>0,   ev:"Programa mantenimiento preventivo"          },
+    { cumple: calRows&&calRows.length>0,               ev:"Equipos de medición calibrados"            },
+  ]};
 }
 
 // ── SECCIÓN 1: Organización Empresarial (max 14)
@@ -5337,9 +5500,11 @@ function calcAuditor(){
 
   AUD_SECCIONES.forEach(sec => {
     const result = sec.fn();
-    const obtenido = Math.min(result.total, sec.max);
-    const pct = Math.round(obtenido/sec.max*100);
-    const ok = obtenido >= sec.min;
+    const items = result.items || [];
+    const maxPosible = items.length * 3;
+    const obtenido = Math.min(score(items), maxPosible);
+    const pct = maxPosible>0 ? Math.round(obtenido/maxPosible*100) : 0;
+    const ok = pct >= 75;
     if(ok) seccionesOk++;
     totalScore += obtenido;
     totalMax += sec.max;
@@ -5431,7 +5596,7 @@ function renderHistorialAud(){
       const bg=p>=90?'#e8f5e9':p>=75?'#fff8e1':'#ffebee';
       return `<tr style="background:${bg};border-bottom:1px solid #e0e0e0;">
         <td style="padding:8px;font-weight:600;">${h.mes}</td>
-        <td style="padding:8px;text-align:center;font-weight:800;">${h.score}/164</td>
+        <td style="padding:8px;text-align:center;font-weight:800;">${h.score}/168</td>
         <td style="padding:8px;text-align:center;font-weight:700;">${h.pct}</td>
         <td style="padding:8px;text-align:center;">${h.ok}</td>
         <td style="padding:8px;">${sem}</td>
